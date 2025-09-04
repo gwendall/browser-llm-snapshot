@@ -8,6 +8,14 @@ Why it exists:
 - Speed up triage of hotspots, jank, and memory leaks in frameworks like Next.js and graphics apps using Three.js/WebGL.
 - Produce repeatable, copy‑pasteable artifacts for issues and PRs, all while keeping data local to your browser.
 
+## When To Use
+- Grab a quick performance snapshot (~10s) of any page.
+- Investigate jank, slow interactions, or frame drops during user flows.
+- Hunt memory leaks or verify heap growth over time.
+- Analyze Three.js/WebGL stats (draw calls, FPS, renderer.info deltas).
+- Compare before/after optimizations and attach reports to PRs/issues.
+- Share context with an LLM to get targeted optimization suggestions.
+
 ## What It Does
 - Captures CPU, memory, Web Vitals, and WebGL/Three.js stats while you naturally use a page.
 - Builds an LLM‑ready Markdown report (Claude/Copilot/ChatGPT) with:
