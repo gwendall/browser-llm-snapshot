@@ -1,0 +1,6 @@
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 12px; width: 640px; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+button { padding: 6px 10px; }
+textarea { width: 100%; box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; }
+.hint { margin-top: 6px; color: #666; font-size: 12px; }
+

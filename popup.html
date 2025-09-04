@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>LLM Perf Reporter</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="controls">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="quick">Quick 10s Profile</button>
+      <button id="report">Build Report</button>
+      <button id="copy">Copy</button>
+    </div>
+    <textarea id="output" rows="20" spellcheck="false" placeholder="Report will appear here..."></textarea>
+    <div class="hint">Tip: Click Quick 10s Profile, then Copy to paste into your LLM.</div>
+    <script type="module" src="popup.js"></script>
+  </body>
+  </html>
+

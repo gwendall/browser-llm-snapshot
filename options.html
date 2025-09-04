@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>LLM Perf Reporter — Options</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 16px; max-width: 720px; }
+      label { display: block; margin-top: 12px; font-weight: 600; }
+      input[type="text"] { width: 100%; padding: 6px; font-size: 14px; }
+      .hint { color: #666; font-size: 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>LLM Perf Reporter — Options</h1>
+    <label>Local code server base URL (optional)</label>
+    <input id="codeServerUrl" type="text" placeholder="e.g. http://localhost:3001" />
+    <div class="hint">If you run a local server to serve source files, future versions can include relevant code snippets.</div>
+    <p>
+      <button id="save">Save</button>
+      <span id="status"></span>
+    </p>
+    <script>
+      const input = document.getElementById('codeServerUrl');
+      const status = document.getElementById('status');
+      const save = document.getElementById('save');
+      chrome.storage.sync.get(['codeServerUrl'], (data) => {
+        if (data.codeServerUrl) input.value = data.codeServerUrl;
+      });
+      save.addEventListener('click', () => {
+        chrome.storage.sync.set({ codeServerUrl: input.value || '' }, () => {
+          status.textContent = 'Saved';
+          setTimeout(() => status.textContent = '', 1000);
+        });
+      });
+    </script>
+  </body>
+  </html>
+
