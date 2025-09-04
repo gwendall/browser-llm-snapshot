@@ -1,5 +1,13 @@
 # LLM Perf Reporter — Frontend Runtime Profiler (Chrome MV3)
 
+## Introduction
+LLM Perf Reporter is a Chrome (MV3) extension that profiles a live web page and turns the findings into a concise Markdown report you can paste into an LLM. It attaches to the DevTools Protocol to sample CPU and memory, collect Web Vitals, and read WebGL/Three.js stats, then remaps minified frames via source maps for readable stack traces.
+
+Why it exists:
+- Share performance context with AI assistants and teammates without screenshots or manual DevTools steps.
+- Speed up triage of hotspots, jank, and memory leaks in frameworks like Next.js and graphics apps using Three.js/WebGL.
+- Produce repeatable, copy‑pasteable artifacts for issues and PRs, all while keeping data local to your browser.
+
 ## What It Does
 - Captures CPU, memory, Web Vitals, and WebGL/Three.js stats while you naturally use a page.
 - Builds an LLM‑ready Markdown report (Claude/Copilot/ChatGPT) with:
